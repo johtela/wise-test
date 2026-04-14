@@ -1,6 +1,6 @@
-Test/ExprParser«import«Parsec/Many»¸ "# Parsing Arithmetic Expressions
+Test/ExprParser«import«Parsec/Many»¸ asset«Test/StyleFile.css»¸ "# Parsing Arithmetic Expressions
 
-A common way to demonstrate parser construction is to use a grammar that represents arithmetic expressions. We build a parser for simple expressions that consist of addition, subtraction, multiplication, and division operations."¸ asset«Test/StyleFile.css»¸ type«"## Tokens
+A common way to demonstrate parser construction is to use a grammar that represents arithmetic expressions. We build a parser for simple expressions that consist of addition, subtraction, multiplication, and division operations."¸ type«"## Tokens
 
 Tokens include numbers, parenthesis, operators, and whitespace."¸ data«ExprToken¸ |«.Number«1»¸ .OpenParen«2»¸ .CloseParen«3»¸ .Plus«4»¸ .Minus«5»¸ .Multiply«6»¸ .Divide«7»¸ .Whitespace«8»¸ .EOF«9»»»»¸ instance«"We need to define equality for ExprTokens. We use the strict value equality here."¸ Eq«ExprToken¸ ==«===»¸ !=«!==»»»¸ const«"## Lexer
 
