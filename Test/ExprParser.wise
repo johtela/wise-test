@@ -2,7 +2,7 @@ Test/ExprParser«import«Parsec/Many»¸ "# Parsing Arithmetic Expressions
 
 A common way to demonstrate parser construction is to use a grammar that represents arithmetic expressions. We build a parser for simple expressions that consist of addition, subtraction, multiplication, and division operations."¸ type«"## Tokens
 
-Tokens include numbers, parenthesis, operators, and whitespace."¸ data«ExprToken¸ |«.Number«10»¸ .OpenParen«2»¸ .CloseParen«3»¸ .Plus«4»¸ .Minus«5»¸ .Multiply«6»¸ .Divide«7»¸ .Whitespace«8»¸ .EOF«9»»»»¸ instance«"We need to define equality for ExprTokens. We use the strict value equality here."¸ Eq«ExprToken¸ ==«===»¸ !=«!==»»»¸ const«"## Lexer
+Tokens include numbers, parenthesis, operators, and whitespace."¸ data«ExprToken¸ |«.Number«1»¸ .OpenParen«2»¸ .CloseParen«3»¸ .Plus«4»¸ .Minus«5»¸ .Multiply«6»¸ .Divide«7»¸ .Whitespace«8»¸ .EOF«9»¸ .Dummy1«10»»»»¸ instance«"We need to define equality for ExprTokens. We use the strict value equality here."¸ Eq«ExprToken¸ ==«===»¸ !=«!==»»»¸ const«"## Lexer
 
 The lexer can be constructed with a single expression. We specify the regular expression that accepts a given token, and associate it to the member of the enumeration defined above."¸ lexer«Lexer«ExprToken»¸ newLexer«[«.Token«.Number¸ "-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?"»¸ .Token«.OpenParen¸ "\("»¸ .Token«.CloseParen¸ "\)"»¸ .Token«.Plus¸ "\+"»¸ .Token«.Minus¸ "-"»¸ .Token«.Multiply¸ "\*"»¸ .Token«.Divide¸ "\/"»¸ .Token«.Whitespace¸ "[\t\n\r ]+"»¸ .Token«.EOF¸ "$"»»»»¸ "## Parser
 
