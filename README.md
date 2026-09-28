@@ -5,7 +5,7 @@ languages, a [structure editor][1] refers to software that allows direct
 manipulation of [abstract syntax trees][2] (ASTs), eliminating the need for 
 traditional text-based syntax. In Wise, this is achieved by editing data 
 structures known as function expressions. These form a simple and uniform tree 
-structure capable of representing all syntactic constructs.
+structure capable of represententing all syntactic constructs.
 
 ## Key Features
 
@@ -15,6 +15,7 @@ Wise is a functional programming language, though
 not a purely functional one. It permits side effects and encourages their use 
 when practical. The design philosophy emphasizes simplicity without sacrificing 
 expressive power.
+New line.
 
 ### Strong Typing
 
